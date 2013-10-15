@@ -1,4 +1,12 @@
-﻿namespace MapTheStars.Tests.Models
+﻿// <copyright file="UserModelExtensionsTests.cs" company="MapTheStars">
+// Copyright (c) 2013 All Rights Reserved
+// </copyright>
+// <author>Sean Cogan</author>
+// <author>Waleed Johnson</author>
+// <author>Kevin Sonnen</author>
+// <author>Luke Westby</author>
+
+namespace MapTheStars.Tests.Models
 {
     using System;
     using MapTheStars.Models;
@@ -7,13 +15,22 @@
     [TestClass]
     public class UserModelExtensionsTests
     {
+        #region TestContext
+
         private TestContext testContext;
+
         public TestContext TestContext
         {
             get { return testContext; }
             set { testContext = value; }
         }
 
+        #endregion
+
+        /// <summary>
+        /// Tests the UserModel extension method GenerateGravatarUrl by comparing
+        /// to a verified url string
+        /// </summary>
         [TestMethod]
         public void TestGenerateGravatarUrl()
         {
